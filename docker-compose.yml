@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  bdinf_final_project:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    container_name: elasticsearch
+    environment:
+      - ELASTIC_PASSWORD=iA7LwG44T2Dq5NXd9D7C
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    restart: always
